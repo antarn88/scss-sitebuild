@@ -2,9 +2,9 @@
 
 $customYellow: rgb(255, 210, 72);
 $customYellow2: #fdcc52;
+$customYellow3: rgb(253, 203, 80);
 
-html,
-body {
+* {
     box-sizing: border-box;
 }
 
@@ -55,7 +55,6 @@ footer {
         display: flex;
         flex-direction: row-reverse;
         width: 100%;
-        padding: 1rem;
     }
 
     &__list {
@@ -121,6 +120,12 @@ footer {
     flex-direction: column;
     align-items: center;
 
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__text {
         color: white;
         text-align: center;
@@ -134,7 +139,6 @@ footer {
 
     &__button {
         padding: 1rem 3rem;
-        color: black;
         border: 2px solid white;
         background-color: transparent;
         border-radius: 50rem;
@@ -144,6 +148,8 @@ footer {
         font-size: 1.25rem;
         line-height: 1.5rem;
         margin-top: 1.5rem;
+        cursor: pointer;
+        text-transform: uppercase;
 
         &:hover {
             transition: all 300ms;
@@ -175,6 +181,47 @@ footer {
     }
 }
 
+.section-two {
+    background-color: $customYellow3;
+    text-align: center;
+    line-height: 1.25;
+
+    &__text-container {
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+
+    }
+
+    &__text-1 {
+        margin-top: 0;
+        padding-top: 3rem;
+        font-size: 3.5rem;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    &__text-2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-top: 1rem;
+    }
+
+    &__badge-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: -1rem;
+        padding-bottom: 3.5rem;
+    }
+
+    img {
+        width: 268px;
+        padding-bottom: 1rem;
+    }
+}
+
 @media only screen and (min-width: 993px) {
     .nav {
         &__container {
@@ -192,6 +239,36 @@ footer {
 
         &__hamburger-label {
             display: none;
+        }
+    }
+
+    .section-one {
+        flex-direction: row;
+
+        &__text-container {
+            margin-left: 15%;
+            margin-bottom: 8%;
+            align-items: flex-start;
+
+            h1 {
+                text-align: left;
+                padding-left: 0;
+            }
+        }
+
+        &__telephone-container {
+            margin-right: 15%;
+        }
+    }
+
+    .section-two {
+        &__badge-container {
+            flex-direction: row;
+            justify-content: center;
+
+            span {
+                margin-right: .5rem;
+            }
         }
     }
 }

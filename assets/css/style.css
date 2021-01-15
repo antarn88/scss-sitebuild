@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Lato&family=Mulish&display=swap");
-html,
-body {
+* {
   box-sizing: border-box;
 }
 
@@ -49,7 +48,6 @@ footer {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  padding: 1rem;
 }
 .nav__list {
   display: none;
@@ -107,6 +105,11 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+.section-one__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .section-one__text {
   color: white;
   text-align: center;
@@ -119,7 +122,6 @@ footer {
 }
 .section-one__button {
   padding: 1rem 3rem;
-  color: black;
   border: 2px solid white;
   background-color: transparent;
   border-radius: 50rem;
@@ -129,6 +131,8 @@ footer {
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin-top: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 .section-one__button:hover {
   transition: all 300ms;
@@ -155,6 +159,41 @@ footer {
   max-width: 88%;
 }
 
+.section-two {
+  background-color: #fdcb50;
+  text-align: center;
+  line-height: 1.25;
+}
+.section-two__text-container {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+.section-two__text-1 {
+  margin-top: 0;
+  padding-top: 3rem;
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.section-two__text-2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 1rem;
+}
+.section-two__badge-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1rem;
+  padding-bottom: 3.5rem;
+}
+.section-two img {
+  width: 268px;
+  padding-bottom: 1rem;
+}
+
 @media only screen and (min-width: 993px) {
   .nav__container {
     align-items: center;
@@ -169,6 +208,30 @@ footer {
   }
   .nav__hamburger-label {
     display: none;
+  }
+
+  .section-one {
+    flex-direction: row;
+  }
+  .section-one__text-container {
+    margin-left: 15%;
+    margin-bottom: 8%;
+    align-items: flex-start;
+  }
+  .section-one__text-container h1 {
+    text-align: left;
+    padding-left: 0;
+  }
+  .section-one__telephone-container {
+    margin-right: 15%;
+  }
+
+  .section-two__badge-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .section-two__badge-container span {
+    margin-right: 0.5rem;
   }
 }
 
