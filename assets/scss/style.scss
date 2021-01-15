@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Lato&family=Mulish&display=swap");
+
+$customYellow: rgb(255, 210, 72);
+$customYellow2: #fdcc52;
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav {
+    font-family: "Catamaran", Helvetica, Arial, sans-serif;
+}
+
+button {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+p,
+footer {
+    font-family: "Mulish", Helvetica, Arial, sans-serif;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    height: 4.8rem;
+
+    &__title {
+        display: inline-block;
+        margin-left: 2rem;
+        line-height: 1.5;
+        color: $customYellow;
+
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    &__container {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+    }
+
+    &__link {
+        display: block;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        color: black;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__hamburger-checkbox {
+        display: none;
+
+        &:checked+.nav__list {
+            display: flex;
+        }
+    }
+
+    &__hamburger-label {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        height: 1.5rem;
+        padding: 0.75rem;
+        width: 1.5rem;
+        border: 1px solid rgba(0, 0, 0, .2);
+        margin-right: 5rem;
+        position: absolute;
+        top: 1rem;
+    }
+
+    &__hamburger-line {
+        background-color: rgba(0, 0, 0, .5);
+        display: block;
+        height: 2px;
+        width: 1.5rem;
+    }
+}
+
+.section-one {
+    background: url("../../assets/img/bg-pattern.png"), linear-gradient(90deg, rgb(218, 37, 52), rgb(128, 65, 144));
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+        color: white;
+        text-align: center;
+        padding-top: 7rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: 1.1;
+    }
+
+    &__button {
+        padding: 1rem 3rem;
+        color: black;
+        border: 2px solid white;
+        background-color: transparent;
+        border-radius: 50rem;
+        color: white;
+        user-select: none;
+        outline: transparent;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+
+        &:hover {
+            transition: all 300ms;
+            border-color: $customYellow2;
+            background-color: $customYellow2;
+            color: black;
+            box-shadow: 0 0 3px $customYellow2;
+        }
+    }
+
+    &__telephone-container {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        max-width: 18rem;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    &__phone-image {
+        max-width: 100%;
+    }
+
+    &__inner-phone {
+        position: absolute;
+        top: 4rem;
+        right: 1.05rem;
+        max-width: 88%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .nav {
+        &__container {
+            align-items: center;
+        }
+
+        &__list {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            top: 1rem;
+            left: 65%;
+        }
+
+        &__hamburger-label {
+            display: none;
+        }
+    }
+}
