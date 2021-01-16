@@ -194,6 +194,30 @@ footer {
   padding-bottom: 1rem;
 }
 
+.section-three__title-container {
+  text-align: center;
+  padding: 0 5%;
+  line-height: 1.25;
+}
+.section-three__title {
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-top: 6rem;
+  margin-bottom: 0.5rem;
+}
+.section-three__subtitle {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.section-three hr {
+  width: 15rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+}
+
 @media only screen and (min-width: 993px) {
   .nav__container {
     align-items: center;
