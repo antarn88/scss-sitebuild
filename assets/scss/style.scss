@@ -3,8 +3,9 @@
 $customYellow: rgb(255, 210, 72);
 $customYellow2: #fdcc52;
 $customYellow3: rgb(253, 203, 80);
+$iconColor: rgb(186, 50, 90);
 
-* {
+html, body {
     box-sizing: border-box;
 }
 
@@ -223,6 +224,10 @@ footer {
 }
 
 .section-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__title-container {
         text-align: center;
         padding: 0 5%;
@@ -249,13 +254,110 @@ footer {
         border-top: 1px solid rgba(0, 0, 0, .1);
         margin-bottom: 5rem;
     }
+    
+    &__containers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__telephone-container {
+        min-width: 19rem;
+        max-width: 22rem;
+        position: relative;
+        margin-bottom: 1rem;
+    }
 
+    &__phone-img {
+        max-width: 100%;
+    }
 
+    &__inner-phone {
+        position: absolute;
+        max-width: 88%;
+        left: 6%;
+        bottom: 12%;
+    }
+
+    &__card-container {
+        text-align: center;
+        margin-bottom: 5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        min-width: 50%;
+    }
+
+    &__icon {
+        color: $iconColor;
+        font-size: 4.5rem;
+        margin-bottom: 0;
+    }
+
+    &__icon-title {
+        font-size: 2.5rem;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    &__icon-subtitle {
+        font-size: 1.25rem;
+        margin: 0;
+    }
 }
 
+.section-four {
+    background-image: url("../../assets/img/bg-cta.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    &__filtered-container {
+        background-color: rgba(0, 0, 0, .5);
+    }
 
+    &__first-text {
+        padding-top: 10rem;
+        padding-left: 5%;
+        font-size: 3.5rem;
+        color: white;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 1.3;
+    }
 
+    &__second-text {
+        padding-left: 5%;
+        font-size: 3.5rem;
+        color: white;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 1.3;
+    }
+
+    &__button {
+        margin-left: 5%;
+        margin-bottom: 15rem;
+        padding: 1rem 3rem;
+        border: 2px solid white;
+        background-color: transparent;
+        border-radius: 50rem;
+        color: white;
+        user-select: none;
+        outline: transparent;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+            border: 2px solid $customYellow2;
+            background-color: $customYellow2;
+            color: black;
+        }
+    }
+}
 
 
 @media only screen and (min-width: 993px) {
@@ -305,6 +407,65 @@ footer {
             span {
                 margin-right: .5rem;
             }
+        }
+    }
+
+    .section-three {
+        padding: 0 10%;
+
+        &__containers {
+            flex-direction: row;
+            margin-bottom: 5rem;
+            max-width: 80%;
+        }
+
+        &__card-container {
+            display: flex;
+            margin-left: 5%;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            width: 50%;
+        }
+
+        &__telephone-container {
+            margin-left: 10%;
+            align-items: center;
+        }
+
+        &__first-line-cards {
+            display: flex;
+            padding-right: 7%;
+        }
+
+        &__second-line-cards {
+            display: flex;
+            padding-right: 7%;
+        }
+
+        &__icon {
+            margin-top: 0;
+        }
+
+        &__icon-title {
+            line-height: 1;
+        }
+
+        &__icon-subtitle {
+            padding: 5%
+        }
+    }
+
+    .section-four {
+        &__first-text {
+            padding-left: 10%;
+        }
+    
+        &__second-text {
+            padding-left: 10%;
+        }
+    
+        &__button {
+            margin-left: 10%;
         }
     }
 }
