@@ -313,6 +313,58 @@ footer {
   color: black;
 }
 
+.section-five {
+  text-align: center;
+  background-color: rgba(253, 203, 78, 0.9);
+}
+.section-five__text {
+  margin-top: 0;
+  padding-top: 5rem;
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+.section-five__heart-symbol {
+  color: #dd4c39;
+}
+.section-five__social-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+.section-five__twitter-icon {
+  border-radius: 50%;
+  background-color: #1da1f3;
+  width: 6rem;
+  height: 6rem;
+  line-height: 2.4;
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.section-five__facebook-icon {
+  border-radius: 50%;
+  background-color: #3b5999;
+  width: 6rem;
+  height: 6rem;
+  line-height: 2.4;
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.section-five__google-plus-icon {
+  border-radius: 50%;
+  background-color: #dd4c39;
+  width: 6rem;
+  height: 6rem;
+  line-height: 2.4;
+  color: white;
+  font-size: 2.5rem;
+}
+.section-five:hover {
+  background-color: #fdcb4e;
+}
+
 @media only screen and (min-width: 993px) {
   .nav__container {
     align-items: center;

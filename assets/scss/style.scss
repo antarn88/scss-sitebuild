@@ -4,6 +4,10 @@ $customYellow: rgb(255, 210, 72);
 $customYellow2: #fdcc52;
 $customYellow3: rgb(253, 203, 80);
 $iconColor: rgb(186, 50, 90);
+$heartColor: rgb(221, 76, 57);
+$twitterColor: rgb(29, 161, 243);
+$facebookColor: rgb(59, 89, 153);
+$googlePlusColor: rgb(221, 76, 57);
 
 html, body {
     box-sizing: border-box;
@@ -359,6 +363,64 @@ footer {
     }
 }
 
+.section-five {
+    text-align: center;
+    background-color: rgba(253, 203, 78, 0.9);
+
+    &__text {
+        margin-top: 0;
+        padding-top: 5rem;
+        font-size: 3.5rem;
+        font-weight: normal;
+        margin-bottom: .5rem;
+    }
+
+    &__heart-symbol {
+        color: $heartColor;
+    }
+
+    &__social-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5rem;
+    }
+
+    &__twitter-icon {
+        border-radius: 50%;
+        background-color: $twitterColor;
+        width: 6rem;
+        height: 6rem;
+        line-height: 2.4;
+        color: rgb(255, 255, 255);
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    &__facebook-icon {
+        border-radius: 50%;
+        background-color: $facebookColor;
+        width: 6rem;
+        height: 6rem;
+        line-height: 2.4;
+        color: rgb(255, 255, 255);
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    &__google-plus-icon {
+        border-radius: 50%;
+        background-color: $googlePlusColor;
+        width: 6rem;
+        height: 6rem;
+        line-height: 2.4;
+        color: rgb(255, 255, 255);
+        font-size: 2.5rem;
+    }
+    
+    &:hover {
+        background-color: rgba(253, 203, 78, 1);
+    }
+}
 
 @media only screen and (min-width: 993px) {
     .nav {
